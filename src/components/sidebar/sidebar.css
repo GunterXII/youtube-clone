@@ -1,0 +1,110 @@
+/* Contenitore principale */
+.sidebar {
+    background-color: #fff;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 80px 2% 20px 2%;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+/* Link principali */
+.side-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.side-link img {
+    width: 22px;
+    margin-right: 16px;
+}
+.side-link p {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Hover interattivo */
+.side-link:hover {
+    background: rgba(62, 166, 255, 0.1);
+    transform: translateX(4px);
+}
+
+/* Separatore */
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    width: 85%;
+    background: #e0e0e0;
+    margin: 15px 0;
+}
+
+/* Sezione iscritti */
+.subscribed-list h3 {
+    font-size: 12px;
+    margin: 20px 0 10px 5px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.subscribed-list img {
+    width: 26px;
+    border-radius: 50%;
+    margin-right: 14px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.subscribed-list .side-link:hover img {
+    border-color: #3ea6ff;
+}
+
+/* Sidebar ridotta */
+.small-sidebar {
+    width: 5%;
+    overflow-x: hidden;
+}
+.small-sidebar p,
+.small-sidebar span,
+.small-sidebar h3 {
+    display: none;
+}
+.small-sidebar .side-link {
+    justify-content: center;
+    padding: 10px 0;
+    margin: 12px 0;
+}
+.small-sidebar .side-link img {
+    margin-right: 0;
+    width: 24px;
+}
+.small-sidebar hr {
+    width: 40%;
+    margin: 20px auto;
+    opacity: 0.7;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+.small-sidebar:hover hr {
+    width: 60%;
+    opacity: 1;
+}
+
+/* Link attivo */
+.side-link.active img {
+    padding-bottom: 2px;
+    border-bottom: 3px solid red;
+}
+
+/* Responsive mobile */
+@media(max-width: 900px){
+    .sidebar {
+        display: none;
+    }
+}

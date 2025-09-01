@@ -1,0 +1,21 @@
+/* Contenitore principale */
+.container {
+    background-color: #f9f9f9;
+    padding-left: 17%;   /* spazio per sidebar */
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Contenitore più largo se sidebar nascosta */
+.large-container {
+    padding-left: 7%;
+}
+
+/* Responsive: su schermi piccoli riduce padding */
+@media (max-width: 900px) {
+    .container, .large-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

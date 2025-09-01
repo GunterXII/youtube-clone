@@ -1,0 +1,106 @@
+/* Navbar principale */
+nav {
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Icona menu */
+.menu-icon {
+    width: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+/* Barra di ricerca */
+.nav-middle .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    background: #f9f9f9;
+    margin-right: 15px;
+    padding: 6px 14px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.nav-middle .search-box:focus-within {
+    border-color: #3ea6ff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(62, 166, 255, 0.3);
+}
+.nav-middle .search-box input {
+    width: 380px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+}
+.nav-middle .search-box img {
+    width: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.nav-middle .search-box img:hover {
+    opacity: 0.7;
+}
+
+/* Icone lato destro */
+.nav-right img {
+    width: 26px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-right img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Notifiche: animazione glow */
+#not:hover {
+    transform: rotate(-35deg);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.9));
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    from { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6)); }
+    to { filter: drop-shadow(0 0 14px rgba(255, 215, 0, 1)); }
+}
+
+/* Avatar utente */
+.user-icon {
+    width: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+.user-icon:hover {
+    box-shadow: 0 0 0 3px rgba(62, 166, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu-icon { display: none; }
+    .nav-right img { display: none; }
+    .nav-right .user-icon { display: block; width: 30px; }
+    .logo { width: 90px; }
+    .nav-middle .search-box input { width: 100px; }
+}

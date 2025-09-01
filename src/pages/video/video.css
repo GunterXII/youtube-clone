@@ -1,0 +1,19 @@
+/* Contenitore principale della pagina video */
+.play-container {
+    background-color: #f9f9f9;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex; /* layout flessibile: video + consigliati */
+    justify-content: space-between;
+    flex-wrap: wrap; /* si adatta su schermi piccoli */
+}
+
+/* Responsive: padding maggiore su mobile */
+@media (max-width: 900px) {
+    .play-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
